@@ -12,15 +12,52 @@ import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
 import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
+import Form from './components/Form';
+import Fragment from './components/Fragment';
+import Table from './components/Table';
+import PureComp from './components/PureComp';
+import CLickTwo from './components/CLickTwo';
+import HoverCOunter from './components/HoverCOunter';
+import User from './components/User';
+import CounterTwo from './components/CounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/UserContext';
 
 
 function App() {
   return (
     <div className="App">
+  <UserProvider value="Mumo">
+      <ComponentC />
+  </UserProvider>
+  
 
-<Stylesheet primary={true}/> 
+
+{/* 
+<CounterTwo
+    render={(count, incrementCount) => (
+      <CLickTwo count={count} incrementCount= {incrementCount} />
+      )}
+  />
+   <CounterTwo
+    render={(count, incrementCount) => (
+      <HoverCOunter count={count} incrementCount= {incrementCount} />
+      )}
+  />
+  <CLickTwo />
+<HoverCOunter />
+<User name= {(isLoggedIn) => isLoggedIn ? "Mumo" : "Guest"}/>
+<User name= "Mumo"/> 
+*/}
 
 {/*
+<PureComp />
+<Table />
+<Fragment />
+<Form />
+<Inline />
+<Stylesheet primary={true}/> 
 <NameList />
 <UserGreeting />
 <ParentComponent />
